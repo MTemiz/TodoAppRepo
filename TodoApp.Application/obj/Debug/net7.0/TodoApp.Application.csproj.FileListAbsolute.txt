@@ -1,0 +1,15 @@
+/Users/mesut/Projects/TodoApp/TodoApp.Application/bin/Debug/net7.0/TodoApp.Application.deps.json
+/Users/mesut/Projects/TodoApp/TodoApp.Application/bin/Debug/net7.0/TodoApp.Application.dll
+/Users/mesut/Projects/TodoApp/TodoApp.Application/bin/Debug/net7.0/TodoApp.Application.pdb
+/Users/mesut/Projects/TodoApp/TodoApp.Application/bin/Debug/net7.0/TodoApp.Domain.dll
+/Users/mesut/Projects/TodoApp/TodoApp.Application/bin/Debug/net7.0/TodoApp.Domain.pdb
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.csproj.AssemblyReference.cache
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.AssemblyInfoInputs.cache
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.AssemblyInfo.cs
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.csproj.CoreCompileInputs.cache
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.csproj.CopyComplete
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.dll
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/refint/TodoApp.Application.dll
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/TodoApp.Application.pdb
+/Users/mesut/Projects/TodoApp/TodoApp.Application/obj/Debug/net7.0/ref/TodoApp.Application.dll
