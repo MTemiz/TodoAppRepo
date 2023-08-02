@@ -1,8 +1,9 @@
 ﻿using MediatR;
+using TodoApp.Application.Dtos;
 
 namespace TodoApp.Application.Features.Todos.Commands
 {
-    public class UpdateTodoCommand : IRequest<Unit>
+    public class UpdateTodoCommand : IRequest<TodoDto>
     {
         public int Id { get; set; }
         public string Title { get; set; }

@@ -8,4 +8,27 @@ services:
       - "8000:80"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
-      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro      
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+
+  tododb:
+    container_name: tododb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1
+      - POSTGRES_DB=TodoDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  postgreadmin:
+    container_name: postgreadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=mst@mst.com
+      - PGADMIN_DEFAULT_PASSWORD=1
+    restart: always
+    ports:
+        - "5050:80"
+    volumes:
+      - postgreadmin_data:/root/.pgadmin

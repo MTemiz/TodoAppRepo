@@ -15,3 +15,5 @@
 /Users/mesut/Projects/TodoApp/TodoApp.Infrastructure/obj/Debug/net7.0/refint/TodoApp.Infrastructure.dll
 /Users/mesut/Projects/TodoApp/TodoApp.Infrastructure/obj/Debug/net7.0/TodoApp.Infrastructure.pdb
 /Users/mesut/Projects/TodoApp/TodoApp.Infrastructure/obj/Debug/net7.0/ref/TodoApp.Infrastructure.dll
+/Users/mesut/Projects/TodoApp/TodoApp.Infrastructure/bin/Debug/net7.0/TodoApp.Infrastructure.runtimeconfig.json
+/Users/mesut/Projects/TodoApp/TodoApp.Infrastructure/obj/Debug/net7.0/TodoApp.Infrastructure.genruntimeconfig.cache

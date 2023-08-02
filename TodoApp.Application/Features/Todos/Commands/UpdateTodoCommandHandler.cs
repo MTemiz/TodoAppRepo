@@ -1,19 +1,23 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using TodoApp.Application.Common.Exceptions;
 using TodoApp.Application.Contracts.Repositories;
+using TodoApp.Application.Dtos;
 using TodoApp.Application.Features.Todos.Commands;
 using TodoApp.Domain.Entities;
 
-public class UpdateTodoCommandHandler : IRequestHandler<UpdateTodoCommand>
+public class UpdateTodoCommandHandler : IRequestHandler<UpdateTodoCommand, TodoDto>
 {
     private readonly ITodoUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
 
-    public UpdateTodoCommandHandler(ITodoUnitOfWork unitOfWork)
+    public UpdateTodoCommandHandler(ITodoUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(UpdateTodoCommand request, CancellationToken cancellationToken)
+    public async Task<TodoDto> Handle(UpdateTodoCommand request, CancellationToken cancellationToken)
     {
         var todo = await _unitOfWork.TodoRepository.GetByIdAsync(request.Id);
 
@@ -30,6 +34,6 @@ public class UpdateTodoCommandHandler : IRequestHandler<UpdateTodoCommand>
 
         await _unitOfWork.SaveChangesAsync();
 
-        return Unit.Value;
+        return _mapper.Map<TodoDto>(todo);
     }
 }

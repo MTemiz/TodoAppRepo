@@ -14,6 +14,8 @@ namespace TodoApp.Infrastructure
         {
             services.AddDbContext<TodoDbContext>(options =>
             {
+                var connStr = configuration.GetConnectionString("TodoConnectionString");
+
                 options.UseNpgsql(configuration.GetConnectionString("TodoConnectionString"));
             });
 

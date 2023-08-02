@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using TodoApp.Domain.Common;
 using TodoApp.Domain.Entities;
 using TodoApp.Infrastructure.Persistence.Configuration;
@@ -7,19 +9,30 @@ namespace TodoApp.Infrastructure.Persistence
 {
     public class TodoDbContext : DbContext
     {
+
+        public TodoDbContext()
+        {
+
+        }
+
         public TodoDbContext(DbContextOptions<TodoDbContext> options) : base(options)
         {
         }
 
         public DbSet<TodoEntity> Todos { get; set; }
+       
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=TodoDb;Username=postgres;Password=1;");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new TodoEntityConfiguration());

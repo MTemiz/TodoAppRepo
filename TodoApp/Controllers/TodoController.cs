@@ -20,16 +20,16 @@ namespace TodoApp.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var query = new GetTodosQuery();
-            var result = await _mediator.Send(query);
+            var result = await _mediator.Send(new GetTodosQuery());
+
             return Ok(result);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var query = new GetTodoQuery { Id = id };
-            var result = await _mediator.Send(query);
+            var result = await _mediator.Send(new GetTodoQuery { Id = id });
+
             return Ok(result);
         }
 
@@ -37,6 +37,7 @@ namespace TodoApp.Controllers
         public async Task<IActionResult> Create(CreateTodoCommand command)
         {
             var result = await _mediator.Send(command);
+
             return CreatedAtAction(nameof(GetById), new { id = result }, result);
         }
 
@@ -49,6 +50,7 @@ namespace TodoApp.Controllers
             }
 
             await _mediator.Send(command);
+
             return NoContent();
         }
 
@@ -56,7 +58,9 @@ namespace TodoApp.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var command = new DeleteTodoCommand { Id = id };
+
             await _mediator.Send(command);
+
             return NoContent();
         }
     }
