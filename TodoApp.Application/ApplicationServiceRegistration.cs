@@ -15,7 +15,7 @@ namespace TodoApp.Application
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             
 
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehavior<,>));
+            //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
             return services;

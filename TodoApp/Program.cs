@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Serilog;
 using TodoApp.Application;
 using TodoApp.Infrastructure;
 using TodoApp.Infrastructure.Persistence;
+using TodoApp.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var logger = new LoggerConfiguration()
+        .ReadFrom.Configuration(builder.Configuration)
+        .Enrich.FromLogContext()
+        .CreateLogger();
+
+builder.Logging.ClearProviders();
+
+builder.Logging.AddSerilog(logger);
+
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 

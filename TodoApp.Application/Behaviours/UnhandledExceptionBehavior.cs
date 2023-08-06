@@ -21,6 +21,7 @@ namespace TodoApp.Application.Behaviours
             }
             catch (Exception ex)
             {
+
                 var requestName = typeof(TRequest).Name;
 
                 _logger.LogError(ex, "Application Request : Unhandled exception for Request {Name} {@Request}", requestName, request);
