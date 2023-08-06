@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using TodoApp.Application.Contracts.Repositories;
-using TodoApp.Application.Todos.Queries.GetTodo;
+using TodoApp.Application.Dtos;
 
 namespace TodoApp.Application.Todos.Queries.GetTodos
 {

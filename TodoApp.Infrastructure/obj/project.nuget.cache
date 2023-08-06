@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "x8M3sjkU0G336Bmwi5GVhOHrEEPPpFGnNXw8V+ed/XvleFAOCheTeYc0w4q71OXGePvp3caPft3sHjpaVxmRaQ==",
+  "dgSpecHash": "8c3E2wyv52s5iSj83F804KDDXPNN2NUZ/DXzeCzsysUI3os6bWf87dEXYaVQAh0ymGcKVjz9bY6LEiLVF+N9aw==",
   "success": true,
   "projectFilePath": "/Users/mesut/Projects/TodoApp/TodoApp.Infrastructure/TodoApp.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -33,9 +33,7 @@
     "/Users/mesut/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.4/npgsql.entityframeworkcore.postgresql.7.0.4.nupkg.sha512",
     "/Users/mesut/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/mesut/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/Users/mesut/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
-    "/Users/mesut/.nuget/packages/microsoft.netcore.app.ref/7.0.8/microsoft.netcore.app.ref.7.0.8.nupkg.sha512",
-    "/Users/mesut/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.8/microsoft.aspnetcore.app.ref.7.0.8.nupkg.sha512"
+    "/Users/mesut/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

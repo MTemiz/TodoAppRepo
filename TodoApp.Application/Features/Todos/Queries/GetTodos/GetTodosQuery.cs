@@ -1,6 +1,5 @@
-﻿using System;
-using MediatR;
-using TodoApp.Application.Todos.Queries.GetTodo;
+﻿using MediatR;
+using TodoApp.Application.Dtos;
 
 namespace TodoApp.Application.Todos.Queries.GetTodos
 {

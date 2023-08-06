@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using TodoApp.Application.Common.Exceptions;
 using TodoApp.Application.Contracts.Repositories;
+using TodoApp.Application.Dtos;
 using TodoApp.Domain.Entities;
 
 namespace TodoApp.Application.Todos.Queries.GetTodo

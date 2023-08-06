@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qHy1DvtYGYSeoNtUWQdSYeSimhHRofTfvf68XT4yHLZRdw0IJ00zN+XLxJ0MsI3IJ++T402JgK7KAoY/q5xJdA==",
+  "dgSpecHash": "6t5MP5FQrx+ph4mT602l4syoih0xEXDz0TwIdzBEWDXGLiHRIhZAsfjAjG7VDYqvGjZho4JmF6v7DRT0Al6pOA==",
   "success": true,
   "projectFilePath": "/Users/mesut/Projects/TodoApp/TodoApp.Domain/TodoApp.Domain.csproj",
-  "expectedPackageFiles": [
-    "/Users/mesut/.nuget/packages/microsoft.netcore.app.ref/7.0.8/microsoft.netcore.app.ref.7.0.8.nupkg.sha512",
-    "/Users/mesut/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.8/microsoft.aspnetcore.app.ref.7.0.8.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

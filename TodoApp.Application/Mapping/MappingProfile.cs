@@ -7,7 +7,6 @@ namespace TodoApp.Application.Common.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<TodoEntity, TodoApp.Application.Todos.Queries.GetTodo.TodoDto>();
             CreateMap<TodoEntity, TodoApp.Application.Dtos.TodoDto>();
         }
     }
