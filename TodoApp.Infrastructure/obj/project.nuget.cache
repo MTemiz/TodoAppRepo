@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8c3E2wyv52s5iSj83F804KDDXPNN2NUZ/DXzeCzsysUI3os6bWf87dEXYaVQAh0ymGcKVjz9bY6LEiLVF+N9aw==",
+  "dgSpecHash": "htyQiK3VXge/BU4vaKsKCk3+j1SuVf3whWPjqFqprVmtooNfPwu9FLo+7DoYpprWONYj8dALhIY0sDQ8H0/BBw==",
   "success": true,
   "projectFilePath": "/Users/mesut/Projects/TodoApp/TodoApp.Infrastructure/TodoApp.Infrastructure.csproj",
   "expectedPackageFiles": [

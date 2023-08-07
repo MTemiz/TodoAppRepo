@@ -30,6 +30,8 @@ public class UpdateTodoCommandHandler : IRequestHandler<UpdateTodoCommand, TodoD
 
         todo.Description = request.Description;
 
+        todo.IsCompleted = request.IsCompleted;
+
         await _unitOfWork.TodoRepository.UpdateAsync(todo);
 
         await _unitOfWork.SaveChangesAsync();

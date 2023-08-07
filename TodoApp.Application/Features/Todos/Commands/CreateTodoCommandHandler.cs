@@ -21,7 +21,8 @@ public class CreateTodoCommandHandler : IRequestHandler<CreateTodoCommand, TodoD
         var todo = new TodoEntity
         {
             Title = request.Title,
-            Description = request.Description
+            Description = request.Description,
+            IsCompleted = request.IsCompleted
         };
 
         await _unitOfWork.TodoRepository.CreateAsync(todo);

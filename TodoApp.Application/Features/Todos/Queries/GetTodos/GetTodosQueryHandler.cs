@@ -23,7 +23,8 @@ namespace TodoApp.Application.Todos.Queries.GetTodos
         {
             var todos = await _repository.GetAllAsync();
 
-            throw new ApplicationException("asdasd");
+            todos = todos.OrderBy(c => c.Id).ToList();
+
             return _mapper.Map<List<TodoDto>>(todos);
         }
     }
