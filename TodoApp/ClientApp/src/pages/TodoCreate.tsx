@@ -8,6 +8,13 @@ import TodoComponent from '../components/ui/TodoComponent';
 const TodoCreate = () => {
     const navigate = useNavigate();
 
+    const emptyTodo: TodoEntity = {
+        id: null,
+        title: '',
+        description: '',
+        isCompleted: false,
+      };
+
     const handleSave = async (newTodo: TodoEntity) => {
         await todoService.createTodo(newTodo);
         navigate('/list');
@@ -18,7 +25,7 @@ const TodoCreate = () => {
             <h2>
                 Yeni Todo Oluştur
             </h2>
-            <TodoComponent initialValues={{}} onSubmit={handleSave} />
+            <TodoComponent initialValues={emptyTodo} onSubmit={handleSave} />
         </div>
 
     );
