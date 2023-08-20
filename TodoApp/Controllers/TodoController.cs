@@ -1,8 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using TodoApp.Application.Features.Todos.Commands;
+using TodoApp.Application.Features.Todos.Queries.GetTodosPaging;
 using TodoApp.Application.Todos.Queries.GetTodo;
 using TodoApp.Application.Todos.Queries.GetTodos;
+using TodoApp.Mapper;
 
 namespace TodoApp.Controllers
 {
@@ -62,6 +64,14 @@ namespace TodoApp.Controllers
             await _mediator.Send(command);
 
             return NoContent();
+        }
+
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetPaged([FromQuery] GetTodosPagingQuery query)
+        {
+            var result = await _mediator.Send(query);
+
+            return Ok(ApiResponseMapper.MapFromQueryResult(result));
         }
     }
 }

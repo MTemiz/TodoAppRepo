@@ -21,7 +21,7 @@ namespace TodoApp.Infrastructure
 
             services.AddScoped<ITodoUnitOfWork, TodoUnitOfWork>();
             services.AddScoped<ITodoRepository, TodoRepository>();
-
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
             return services;
         }

@@ -8,12 +8,12 @@
 
   <ItemGroup>
     <None Remove="Entities\" />
-    <None Remove="Repositories\" />
     <None Remove="Common\" />
+    <None Remove="PagedResponses\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Common\" />
+    <Folder Include="PagedResponses\" />
   </ItemGroup>
 </Project>

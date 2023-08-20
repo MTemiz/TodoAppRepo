@@ -15,6 +15,9 @@
     <None Remove="Mapping\" />
     <None Remove="Behaviours\" />
     <None Remove="Dtos\" />
+    <None Remove="Responses\" />
+    <None Remove="Features\Todos\Queries\GetTodosPaging\" />
+    <None Remove="Features\Todos\Queries\BaseQuery\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
@@ -25,6 +28,9 @@
     <Folder Include="Mapping\" />
     <Folder Include="Behaviours\" />
     <Folder Include="Dtos\" />
+    <Folder Include="Responses\" />
+    <Folder Include="Features\Todos\Queries\GetTodosPaging\" />
+    <Folder Include="Features\Todos\Queries\BaseQuery\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />

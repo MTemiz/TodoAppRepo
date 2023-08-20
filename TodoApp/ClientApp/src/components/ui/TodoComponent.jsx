@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextField, Checkbox, Button, Grid, Paper } from '@mui/material';
-import TodoEntity from '../../models/TodoEntity';
+import TodoEntity from '../../models/entities/TodoEntity';
 
 interface TodoFormProps {
     initialValues: TodoEntity;
@@ -40,6 +40,8 @@ const TodoComponent: React.FC<TodoFormProps> = ({ initialValues, onSubmit }) => 
                         fullWidth
                         multiline
                         rows={4}
+                        variant="filled"
+                        size="small"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                     />

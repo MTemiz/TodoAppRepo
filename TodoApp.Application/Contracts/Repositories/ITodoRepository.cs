@@ -1,14 +1,10 @@
-﻿using TodoApp.Domain.Entities;
+﻿using System.Linq.Expressions;
+using TodoApp.Domain.Entities;
 
 namespace TodoApp.Application.Contracts.Repositories
 {
-    public interface ITodoRepository
+    public interface ITodoRepository: IRepository<TodoEntity>
     {
-        Task<TodoEntity> GetByIdAsync(int id);
-        Task<List<TodoEntity>> GetAllAsync();
-        Task<TodoEntity> CreateAsync(TodoEntity todo);
-        Task<TodoEntity> UpdateAsync(TodoEntity todo);
-        Task DeleteAsync(int id);
     }
 }
 

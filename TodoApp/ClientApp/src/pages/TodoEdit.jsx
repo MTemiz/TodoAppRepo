@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import todoService from '../services/TodoService';
-import TodoEntity from '../models/TodoEntity';
+import TodoEntity from '../models/entities/TodoEntity';
 import { useParams, useNavigate } from 'react-router-dom';
 import { TextField, Checkbox, Button, Grid, Paper } from '@mui/material';
 import TodoComponent from '../components/ui/TodoComponent';

@@ -1,5 +1,8 @@
 import axios from 'axios';
-import TodoEntity from '../models/TodoEntity';
+import TodoEntity from '../models/entities/TodoEntity';
+import GetTodosPagingQuery from '../models/queries/GetTodosPagingQuery';
+import ApiResponse from '../models/responses/apiResponse';
+import PagedResponse from '../models/responses/pagedResponse';
 
 const API_URL = 'http://localhost:5081/todo';
 
@@ -8,7 +11,7 @@ const getTodos = async (): Promise<TodoEntity[]> => {
   return response.data;
 };
 
-const deleteTodo = async (id: number) => {
+const deleteTodo = async (id: number): Promise<void> => {
   try {
     debugger;
     const response = await axios.delete(`${API_URL}/${id}`);
@@ -48,12 +51,23 @@ const createTodo = async (todo: TodoEntity) => {
   }
 };
 
+const gedPagedTodos = async (criteria: GetTodosPagingQuery) => {
+
+  const response = await axios.get<ApiResponse<PagedResponse<TodoEntity>>>(`${API_URL}/paged`,
+    {
+      params: criteria
+    });
+
+  return response.data;
+};
+
 const todoService = {
   getTodos,
   deleteTodo,
   getTodoById,
   updateTodo,
-  createTodo
+  createTodo,
+  gedPagedTodos
 };
 
 export default todoService;

@@ -3,16 +3,23 @@ namespace TodoApp.Models
 {
     public class ApiResponse<T>
     {
-        public T Data { get; set; }
+        public T Result { get; set; }
+        public int StatusCode { get; set; }
         public bool Succeeded { get; set; }
-        public string Message { get; set; }
+        public List<string> Errors { get; set; }
+        public List<string> InfoMessages { get; set; }
+
         public static ApiResponse<T> Fail(string errorMessage)
         {
-            return new ApiResponse<T> { Succeeded = false, Message = errorMessage };
+            return new ApiResponse<T>()
+            {
+                Succeeded = false,
+                Errors = new List<string>() { errorMessage}
+            };
         }
-        public static ApiResponse<T> Success(T data)
+        public static ApiResponse<T> Success(T result)
         {
-            return new ApiResponse<T> { Succeeded = true, Data = data };
+            return new ApiResponse<T> { Succeeded = true, Result = result };
         }
     }
 }

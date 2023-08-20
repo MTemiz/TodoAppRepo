@@ -22,7 +22,7 @@ public class DeleteTodoCommandHandler : IRequestHandler<DeleteTodoCommand>
             throw new NotFoundException(nameof(TodoEntity), request.Id);
         }
 
-        await _unitOfWork.TodoRepository.DeleteAsync(request.Id);
+        await _unitOfWork.TodoRepository.RemoveAsync(todo);
 
         await _unitOfWork.SaveChangesAsync();
 

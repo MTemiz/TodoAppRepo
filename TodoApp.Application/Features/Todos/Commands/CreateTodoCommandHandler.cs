@@ -25,7 +25,7 @@ public class CreateTodoCommandHandler : IRequestHandler<CreateTodoCommand, TodoD
             IsCompleted = request.IsCompleted
         };
 
-        await _unitOfWork.TodoRepository.CreateAsync(todo);
+        await _unitOfWork.TodoRepository.AddAsync(todo);
 
         await _unitOfWork.SaveChangesAsync();
 
